@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fdy</title>
+    <!-- link css  -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- link font -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- link swiper css -->
+    <link rel="stylesheet" href="./swiper-bundle.min.css">
+
+</head>
+<body>
+   <!-- header section Starts -->
+    <header class="header flex">
+        <!-- navBar div -->
+        <div class="navBar" id="navBar">
+           <ul class="navLists flex">
+               <li class="navItem"><a href="#home" class="navLink">Home</a></li>
+               <li class="navItem"><a href="#menu" class="navLink">Menu</a></li>
+               <li class="navItem"><a href="#shop" class="navLink">Shop</a></li>
+               <li class="navItem"><a href="#testimonial" class="navLink">Testimonial</a></li>
+               <li class="navItem"><a href="#blog" class="navLink">Blog</a></li>
+               <li class="navItem tableBtn"><a href="#table" class="navLink">Book Table</a></li>
+           </ul>
+
+           <div id="closeNavBar">
+            <i class='bx bxs-x-circle icon' ></i>
+           </div>
+
+           <div class="tagline">
+               <span><strong>Foodie Restaurant</strong> We serve unfogottable taste and with everlasting memories!</span>
+           </div>
+        </div>
+        <!-- navBar Toggle Icon -->
+        <div id="toggleIcon">
+            <i class='bx bx-grid-alt icon' ></i>
+        </div>
+        <!-- logo Div -->
+        <div class="logoDiv">
+            <a href="index.html">oo.</a>
+        </div>
+
+        <!-- navBar information Div -->
+        <div class="navBarInfor flex">
+            <div class="cartDiv">
+                <i class='bx bx-shopping-bag icon'></i>
+                <span class="cartCount">0</span>
+            </div>
+            <div class="contactDiv flex">
+                <i class='bx bxs-phone-call icon' ></i>
+                <span class="phone">+9710 000 000</span>
+            </div>
+            <div class="searchDiv">
+                <i class='bx bx-search-alt icon searchIcon' ></i>
+                <div class="searchBox">
+                    <form method="POST">
+                        <input type="text" name="searchValue" placeholder="Search here...." class="inputBox" required>
+                        <input type="submit" name="submit" class="searchBtn">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </header>
+   <!-- header section Ends -->
+
+   <!-- BODY GOES HERE ===========================-->
+
+   <!-- Footer Section Starts  -->
+   <section class="footer">
+    <div class="sectionContainer container">
+      <div class="sectionContent grid">
+          <div class="footerCol">
+           <div class="logoDiv">
+               <img src="" alt="">Logo
+           </div>
+           <span class="location">
+             71 Pennington Lane Vernon Rockville, CT 06066
+         </span>
+         <div class="socialDiv flex">
+             <a href="#"><i class='bx bxl-facebook-circle icon'></i></a>
+             <a href="#"><i class='bx bxl-instagram-alt icon' ></i></a>
+             <a href="#"><i class='bx bxl-whatsapp icon' ></i></a>
+             <a href="#"><i class='bx bxl-twitter icon' ></i></a>
+         </div>
+
+          </div>
+          <div class="footerCol">
+              <span class="footerTitle">
+                  NEWSLETTER SIGN UP
+              </span>
+              <p class="description">
+                 Subscribe to our newsletters now and stay up to date with exclusive offers.
+              </p>
+              <form action="" method="">
+                  <input type="emial" name="newsletter" placeholder="Your Email Address.." class="emialInput" required>
+                  <input type="submit" name="newsletterBtn" value="Subscribe" class="newsLetterBtn">
+              </form>
+          </div>
+          <div class="footerCol">
+             <span class="footerTitle">
+                 QUICK LINKS
+             </span>
+             <div class="links">
+                 <a href="#">My account</a>
+                 <a href="#">Delivery information</a>
+                 <a href="#table">Table Reservations</a>
+                 <a href="#menu">Today's Menu</a>
+                 <a href="#">Terms and Conditions</a>
+             </div>
+
+          </div>
+      </div>
+    </div>
+    </section>
+    <!-- Footer Section Ends  -->
+
+ <!-- link swiper javascript -->
+ <script src="./swiper-bundle.min.js"></script>
+ <!-- link javascript -->
+ <script src="./main.js"></script>
+</body>
+</html>   

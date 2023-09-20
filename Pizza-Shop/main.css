@@ -1,0 +1,2664 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Plus+Jakarta+Sans:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+  --headerHeight: 3.5rem;
+  --biggestFont: 2.5rem;
+  --normalFont: 1.5rem;
+  --smallFont: 1rem;
+  --smallestFont: .875rem;
+  --borderRadius: .5rem;
+  --boxShadow: 0 2px 8px  rgb(218, 218, 218);
+  --yellowColor: hsl(40, 100%, 50%);
+  --yellowHoverColor: hsl(40, 100%, 40%);
+  --redColor: hsl(0, 100%, 50%);
+  --textColor: hsl(0, 0%, 29%);
+  --h1Color: hsl(0, 0%, 19%);
+  --footerColor: hsl(0, 0%, 16%);
+  --headerColor: hsl(47, 90%, 96%);
+  --itemCardColor: hsl(35, 100%, 91%);
+  --hoverColor: hsl(40, 100%, 50%);
+  --bgColor: whitesmoke;
+  --whiteColor: rgb(255, 255, 255);
+  --greyColor: rgb(238, 238, 238);
+  --borderColor: rgb(219, 219, 219);
+}
+
+body {
+  background: var(--bgColor);
+}
+
+html {
+  font-size: 90%;
+  scroll-behavior: smooth;
+}
+
+.grid {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 2;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: .8rem 1.5rem;
+  border-radius: var(--borderRadius);
+  background: var(--redColor);
+  margin: 1rem 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--hoverColor);
+}
+
+span {
+  font-size: var(--smallFont);
+}
+
+.sectionIntro {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.sectionIntro .introText {
+  color: var(--yellowColor);
+  font-size: var(--smallFont);
+  display: block;
+  padding-bottom: .5rem;
+  font-weight: 600;
+}
+
+.sectionIntro .heading {
+  font-size: var(--normalFont);
+  color: var(--h1Color);
+}
+
+.sectionIntro img {
+  margin-top: 1rem;
+  width: 90px;
+}
+
+.icon {
+  font-size: var(--normalFont);
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: var(--headerHeight);
+  background: var(--headerColor);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  padding: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .icon {
+  color: var(--h1Color);
+}
+
+.header .icon:hover {
+  color: var(--yellowColor);
+}
+
+@media screen and (max-width: 767px) {
+  .header .navBar {
+    position: absolute;
+    top: -35rem;
+    right: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    width: 80%;
+    border-radius: var(--borderRadius);
+    background: var(--headerColor);
+    padding: 2rem 1rem;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-box-shadow: var(--boxShadow);
+            box-shadow: var(--boxShadow);
+    z-index: 1000;
+  }
+  .header .navBar .navLists {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .navBar #closeNavBar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  .header .navBar .tagline {
+    max-width: 600px;
+    color: var(--textColor);
+    font-size: var(--smallestFont);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #e8e8e8;
+  }
+  .header .navBar .tagline strong {
+    display: block;
+    padding-bottom: .5rem;
+  }
+  .header .show {
+    top: 4rem;
+  }
+}
+
+.header .navItem {
+  position: relative;
+  padding: .5rem;
+}
+
+.header .navItem::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 0;
+  background: var(--redColor);
+  border-radius: var(--borderRadius);
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.header .navItem:hover .navLink {
+  color: var(--h1Color);
+}
+
+.header .navItem:hover::after {
+  width: 100%;
+}
+
+.header .navItem .navLink {
+  color: var(--textColor);
+  font-weight: 400;
+}
+
+.header #toggleIcon {
+  cursor: pointer;
+}
+
+.header #toggleIcon .icon {
+  color: var(--h1Color);
+}
+
+.header #toggleIcon:hover .icon {
+  color: var(--yellowColor);
+}
+
+.header .navBarInfor .contactDiv {
+  display: none;
+}
+
+.header .tableBtn {
+  background: var(--yellowColor);
+  border-radius: var(--borderRadius);
+  padding: .5rem 1rem;
+}
+
+.header .tableBtn:hover {
+  background: var(--redColor);
+}
+
+.header .tableBtn:hover .navLink {
+  color: var(--bgColor);
+}
+
+.header .tableBtn .navLink {
+  color: var(--bgColor);
+}
+
+.header .logoDiv a {
+  font-size: var(--normalFont);
+  font-weight: 600;
+  color: var(--h1Color);
+}
+
+.header .navBarInfor .cartDiv {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.header .navBarInfor .cartDiv .cartCount {
+  position: absolute;
+  background: var(--redColor);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  color: whitesmoke;
+  top: 0;
+  right: -8px;
+}
+
+.header .navBarInfor .searchDiv .searchBox {
+  position: absolute;
+  right: 1rem;
+  top: 5rem;
+  background: var(--headerColor);
+  padding: 0;
+  border-radius: var(--borderRadius);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  z-index: 1000;
+}
+
+.header .navBarInfor .searchDiv .searchBox form .inputBox, .header .navBarInfor .searchDiv .searchBox form .searchBtn {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.header .navBarInfor .searchDiv .searchBox form .searchBtn {
+  font-weight: 600;
+  color: var(--h1Color);
+}
+
+.header .navBarInfor .searchDiv .searchBox form .searchBtn:hover {
+  color: var(--yellowColor);
+}
+
+.header .navBarInfor .searchDiv .showSearchBox {
+  padding: .7rem 1rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.header .navBarInfor .account {
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+}
+
+.header .navBarInfor .account .imgDiv {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 3px solid var(--bgColor);
+  overflow: hidden;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+}
+
+.header .navBarInfor .account .imgDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header .navBarInfor .account .icon {
+  color: var(--textColor);
+}
+
+.header .navBarInfor .account .icon:hover {
+  color: var(--redColor);
+}
+
+.bannerSection {
+  padding: 5rem 1rem;
+  gap: 1rem;
+}
+
+.bannerSection .textDiv .redBanner {
+  background: var(--redColor);
+  padding: 0.300rem 1rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  color: var(--bgColor);
+  text-transform: uppercase;
+  outline: none;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.bannerSection .textDiv .bannerTitle {
+  font-weight: 700;
+  font-size: var(--biggestFont);
+  padding: 1rem 0;
+}
+
+.bannerSection .textDiv .list {
+  display: -ms-grid;
+  display: grid;
+  row-gap: .300rem;
+}
+
+.bannerSection .textDiv .list .listContent {
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+}
+
+.bannerSection .textDiv .list .listContent .icon {
+  color: var(--redColor);
+}
+
+.bannerSection .textDiv button {
+  background: var(--yellowColor);
+  color: var(--bgColor);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bannerSection .textDiv button:hover {
+  background: var(--yellowHoverColor);
+}
+
+.bannerSection .imageDiv {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.bannerSection .imageDiv img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.offerSection .sectionContent {
+  gap: 1rem;
+}
+
+.offerSection .sectionContent .itemWrapper {
+  max-width: 280px;
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  border-radius: var(--borderRadius);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  margin: auto;
+}
+
+.offerSection .sectionContent .itemWrapper:hover {
+  background: var(--headerColor);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.offerSection .sectionContent .itemWrapper:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.offerSection .sectionContent .itemWrapper .imgDiv {
+  height: 200px;
+  width: 100%;
+  background-color: var(--headerColor);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .500rem;
+  border-radius: var(--borderRadius);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.offerSection .sectionContent .itemWrapper .imgDiv img {
+  height: 100%;
+  width: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.offerSection .sectionContent .itemWrapper .itemInfor {
+  display: -ms-grid;
+  display: grid;
+  row-gap: .500rem;
+  padding-top: 1rem;
+}
+
+.offerSection .sectionContent .itemWrapper .itemInfor .price_rating {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.offerSection .sectionContent .itemWrapper .itemInfor .price_rating .price {
+  color: var(--redColor);
+  font-weight: 600;
+  font-size: var(--smallFont);
+}
+
+.offerSection .sectionContent .itemWrapper .itemInfor .price_rating .rating {
+  color: var(--yellowColor);
+}
+
+.offerSection .sectionContent .itemWrapper .itemInfor .itemName {
+  font-weight: 600;
+}
+
+.offerSection .sectionContent .itemWrapper .itemInfor .description {
+  max-width: 100%;
+}
+
+.offerSection .sectionContent .itemWrapper .itemInfor button {
+  background: none;
+  border: 1.5px solid var(--yellowColor);
+}
+
+.offerSection .sectionContent .itemWrapper .itemInfor button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--yellowColor);
+  font-weight: 600;
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+}
+
+.offerSection .sectionContent .itemWrapper .itemInfor button:hover {
+  background: var(--yellowColor);
+}
+
+.offerSection .sectionContent .itemWrapper .itemInfor button:hover a {
+  color: var(--bgColor);
+}
+
+.aboutSection .sectionContent {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 2rem;
+}
+
+.aboutSection .sectionContent .textDiv .redBanner {
+  color: var(--redColor);
+  font-weight: 400;
+}
+
+.aboutSection .sectionContent .textDiv .bannerTitle {
+  font-weight: 700;
+  font-size: var(--normalFont);
+  padding: 1rem 0;
+}
+
+.aboutSection .sectionContent .textDiv .list {
+  display: -ms-grid;
+  display: grid;
+  row-gap: .300rem;
+}
+
+.aboutSection .sectionContent .textDiv .list .listContent {
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+}
+
+.aboutSection .sectionContent .textDiv .list .listContent .icon {
+  color: var(--redColor);
+}
+
+.aboutSection .sectionContent .textDiv button {
+  background: var(--yellowColor);
+}
+
+.aboutSection .sectionContent .textDiv button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--bgColor);
+  font-weight: 600;
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+}
+
+.aboutSection .sectionContent .textDiv button:hover {
+  background: var(--yellowHoverColor);
+}
+
+.aboutSection .sectionContent .textDiv button:hover a {
+  color: var(--bgColor);
+}
+
+.aboutSection .sectionContent .imageDiv {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.menuSection .categoriesList, .relatedItems .categoriesList {
+  margin-bottom: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  padding: 1rem;
+  background: var(--greyColor);
+  border-radius: var(--borderRadius);
+}
+
+.menuSection .categoriesList .category, .relatedItems .categoriesList .category {
+  padding: .300rem .7rem;
+  border: 1.5px solid var(--yellowColor);
+  cursor: pointer;
+  color: var(--yellowColor);
+}
+
+.menuSection .categoriesList .categoryActive, .relatedItems .categoriesList .categoryActive {
+  background: var(--yellowColor);
+  color: var(--bgColor);
+}
+
+.menuSection .itemContainer, .relatedItems .itemContainer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.menuSection .itemContainer .itemWrapper, .relatedItems .itemContainer .itemWrapper {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  row-gap: .300rem;
+  max-width: 280px;
+  padding: 1rem 1.5rem;
+  border-radius: var(--borderRadius);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  border: 1px solid var(--borderColor);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  margin: auto;
+}
+
+.menuSection .itemContainer .itemWrapper .rating, .relatedItems .itemContainer .itemWrapper .rating {
+  position: absolute;
+  top: .5rem;
+  right: 0;
+  padding: 0.300rem 1rem;
+  color: var(--yellowColor);
+}
+
+.menuSection .itemContainer .itemWrapper .imgDiv, .relatedItems .itemContainer .itemWrapper .imgDiv {
+  position: relative;
+  height: 200px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.menuSection .itemContainer .itemWrapper .imgDiv img, .relatedItems .itemContainer .itemWrapper .imgDiv img {
+  height: 100%;
+  width: auto;
+}
+
+.menuSection .itemContainer .itemWrapper .imgDiv .optionBtn, .relatedItems .itemContainer .itemWrapper .imgDiv .optionBtn {
+  position: absolute;
+  background: var(--redColor);
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.menuSection .itemContainer .itemWrapper .imgDiv .optionBtn a, .relatedItems .itemContainer .itemWrapper .imgDiv .optionBtn a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--bgColor);
+  font-weight: 600;
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+}
+
+.menuSection .itemContainer .itemWrapper .imgDiv .optionBtn:hover, .relatedItems .itemContainer .itemWrapper .imgDiv .optionBtn:hover {
+  background: var(--yellowColor);
+}
+
+.menuSection .itemContainer .itemWrapper .imgDiv .optionBtn:hover a, .relatedItems .itemContainer .itemWrapper .imgDiv .optionBtn:hover a {
+  color: var(--bgColor);
+}
+
+.menuSection .itemContainer .itemWrapper .itemInfor, .relatedItems .itemContainer .itemWrapper .itemInfor {
+  display: -ms-grid;
+  display: grid;
+  row-gap: .500rem;
+  padding-top: 1rem;
+}
+
+.menuSection .itemContainer .itemWrapper .itemInfor .itemName, .relatedItems .itemContainer .itemWrapper .itemInfor .itemName {
+  font-size: var(--normalFont);
+  font-weight: 600;
+}
+
+.menuSection .itemContainer .itemWrapper .itemInfor .description, .relatedItems .itemContainer .itemWrapper .itemInfor .description {
+  max-width: 100%;
+}
+
+.menuSection .itemContainer .itemWrapper .itemInfor .btn_price, .relatedItems .itemContainer .itemWrapper .itemInfor .btn_price {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menuSection .itemContainer .itemWrapper .itemInfor .btn_price .cartBtn, .relatedItems .itemContainer .itemWrapper .itemInfor .btn_price .cartBtn {
+  background: var(--yellowColor);
+}
+
+.menuSection .itemContainer .itemWrapper .itemInfor .btn_price .cartBtn a, .relatedItems .itemContainer .itemWrapper .itemInfor .btn_price .cartBtn a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--bgColor);
+  font-weight: 600;
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+}
+
+.menuSection .itemContainer .itemWrapper .itemInfor .btn_price .cartBtn:hover, .relatedItems .itemContainer .itemWrapper .itemInfor .btn_price .cartBtn:hover {
+  background: var(--yellowColor);
+}
+
+.menuSection .itemContainer .itemWrapper .itemInfor .btn_price .cartBtn:hover a, .relatedItems .itemContainer .itemWrapper .itemInfor .btn_price .cartBtn:hover a {
+  color: var(--bgColor);
+}
+
+.menuSection .itemContainer .itemWrapper .itemInfor .btn_price .price, .relatedItems .itemContainer .itemWrapper .itemInfor .btn_price .price {
+  color: var(--redColor);
+  font-weight: 600;
+  font-size: var(--normalFont);
+}
+
+.menuSection .itemContainer .itemWrapper:hover, .relatedItems .itemContainer .itemWrapper:hover {
+  background: var(--headerColor);
+}
+
+.menuSection .itemContainer .itemWrapper:hover .optionBtn, .relatedItems .itemContainer .itemWrapper:hover .optionBtn {
+  padding: .8rem 1.5rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.menuSection .itemContainer .itemWrapper:hover img, .relatedItems .itemContainer .itemWrapper:hover img {
+  opacity: .5;
+}
+
+.menuSection .itemContainer .hide, .relatedItems .itemContainer .hide {
+  display: none;
+}
+
+.menuSection .itemContainer .live, .relatedItems .itemContainer .live {
+  -webkit-animation: wrapperOpacity .5s ease-in;
+          animation: wrapperOpacity .5s ease-in;
+}
+
+@-webkit-keyframes wrapperOpacity {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes wrapperOpacity {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.tabelReservation .sectionContent, .login .sectionContent, .register .sectionContent {
+  width: 100%;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.tabelReservation .sectionContent .imgDiv, .login .sectionContent .imgDiv, .register .sectionContent .imgDiv {
+  height: 200px;
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.47)), to(rgba(0, 0, 0, 0.499))), url(./assets/people.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.499)), url(./assets/people.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: var(--borderRadius);
+  padding: 2rem;
+}
+
+.tabelReservation .sectionContent .imgDiv h3, .login .sectionContent .imgDiv h3, .register .sectionContent .imgDiv h3 {
+  color: var(--bgColor);
+  font-weight: 600;
+  font-size: var(--normalFont);
+  padding-bottom: .300rem;
+  display: block;
+}
+
+.tabelReservation .sectionContent .imgDiv .description, .login .sectionContent .imgDiv .description, .register .sectionContent .imgDiv .description {
+  color: var(--bgColor);
+  font-size: var(--smallestFont);
+}
+
+.tabelReservation .sectionContent .formDiv, .login .sectionContent .formDiv, .register .sectionContent .formDiv {
+  width: 100%;
+  padding: 1rem;
+  background: var(--headerColor);
+}
+
+.tabelReservation .sectionContent .formDiv form, .login .sectionContent .formDiv form, .register .sectionContent .formDiv form {
+  display: -ms-grid;
+  display: grid;
+  row-gap: .8rem;
+}
+
+.tabelReservation .sectionContent .formDiv form label, .login .sectionContent .formDiv form label, .register .sectionContent .formDiv form label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: .300rem;
+  font-size: var(--smallestFont);
+}
+
+.tabelReservation .sectionContent .formDiv form label small, .login .sectionContent .formDiv form label small, .register .sectionContent .formDiv form label small {
+  font-size: var(--smallestFont);
+}
+
+.tabelReservation .sectionContent .formDiv form input, .tabelReservation .sectionContent .formDiv form textarea, .login .sectionContent .formDiv form input, .login .sectionContent .formDiv form textarea, .register .sectionContent .formDiv form input, .register .sectionContent .formDiv form textarea {
+  width: 100%;
+  padding: .5rem 1rem;
+  border-radius: var(--borderRadius);
+  background: var(--headerColor);
+  border: 1px solid var(--borderColor);
+  outline: none;
+}
+
+.tabelReservation .sectionContent .formDiv form input:focus, .tabelReservation .sectionContent .formDiv form textarea:focus, .login .sectionContent .formDiv form input:focus, .login .sectionContent .formDiv form textarea:focus, .register .sectionContent .formDiv form input:focus, .register .sectionContent .formDiv form textarea:focus {
+  border: 1px solid var(--yellowColor);
+}
+
+.tabelReservation .sectionContent .formDiv form input::-webkit-input-placeholder, .tabelReservation .sectionContent .formDiv form textarea::-webkit-input-placeholder, .login .sectionContent .formDiv form input::-webkit-input-placeholder, .login .sectionContent .formDiv form textarea::-webkit-input-placeholder, .register .sectionContent .formDiv form input::-webkit-input-placeholder, .register .sectionContent .formDiv form textarea::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.tabelReservation .sectionContent .formDiv form input:-ms-input-placeholder, .tabelReservation .sectionContent .formDiv form textarea:-ms-input-placeholder, .login .sectionContent .formDiv form input:-ms-input-placeholder, .login .sectionContent .formDiv form textarea:-ms-input-placeholder, .register .sectionContent .formDiv form input:-ms-input-placeholder, .register .sectionContent .formDiv form textarea:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.tabelReservation .sectionContent .formDiv form input::-ms-input-placeholder, .tabelReservation .sectionContent .formDiv form textarea::-ms-input-placeholder, .login .sectionContent .formDiv form input::-ms-input-placeholder, .login .sectionContent .formDiv form textarea::-ms-input-placeholder, .register .sectionContent .formDiv form input::-ms-input-placeholder, .register .sectionContent .formDiv form textarea::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.tabelReservation .sectionContent .formDiv form input::placeholder, .tabelReservation .sectionContent .formDiv form textarea::placeholder, .login .sectionContent .formDiv form input::placeholder, .login .sectionContent .formDiv form textarea::placeholder, .register .sectionContent .formDiv form input::placeholder, .register .sectionContent .formDiv form textarea::placeholder {
+  opacity: .4;
+}
+
+.tabelReservation .sectionContent .formDiv form textarea, .login .sectionContent .formDiv form textarea, .register .sectionContent .formDiv form textarea {
+  height: 200px;
+}
+
+.tabelReservation .sectionContent .formDiv form #customerPicture, .login .sectionContent .formDiv form #customerPicture, .register .sectionContent .formDiv form #customerPicture {
+  display: none;
+}
+
+.tabelReservation .sectionContent .formDiv form small, .login .sectionContent .formDiv form small, .register .sectionContent .formDiv form small {
+  color: var(--textColor);
+  display: block;
+  text-align: center;
+}
+
+.tabelReservation .sectionContent .formDiv form small a, .login .sectionContent .formDiv form small a, .register .sectionContent .formDiv form small a {
+  color: var(--yellowHoverColor);
+  cursor: pointer;
+}
+
+.tabelReservation .sectionContent .formDiv form .submitBtn, .login .sectionContent .formDiv form .submitBtn, .register .sectionContent .formDiv form .submitBtn {
+  background: var(--yellowColor);
+  color: var(--bgColor);
+  padding: .8rem 1.5rem;
+  font-weight: 500;
+}
+
+.tabelReservation .sectionContent .formDiv form .submitBtn:hover, .login .sectionContent .formDiv form .submitBtn:hover, .register .sectionContent .formDiv form .submitBtn:hover {
+  background: var(--yellowHoverColor);
+}
+
+.tabelReservation .sectionContent .contactNumber, .login .sectionContent .contactNumber, .register .sectionContent .contactNumber {
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto 0;
+}
+
+.tabelReservation .sectionContent .contactNumber small, .login .sectionContent .contactNumber small, .register .sectionContent .contactNumber small {
+  font-size: var(--smallFont);
+  color: var(--yellowColor);
+  font-weight: 600;
+}
+
+.tabelReservation .sectionContent .contactNumber .phoneNumber, .login .sectionContent .contactNumber .phoneNumber, .register .sectionContent .contactNumber .phoneNumber {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .500rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: .500rem;
+          column-gap: .500rem;
+  color: var(--textColor);
+  font-weight: 600;
+}
+
+.tabelReservation .sectionContent .contactNumber p, .login .sectionContent .contactNumber p, .register .sectionContent .contactNumber p {
+  color: var(--textColor);
+  font-size: var(--smallestFont);
+}
+
+.blogSection .blogContainer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.blogSection .blogContainer .singleBlog {
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+}
+
+.blogSection .blogContainer .singleBlog:hover {
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  background: var(--headerColor);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.blogSection .blogContainer .singleBlog:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.blogSection .blogContainer .singleBlog .imgDiv {
+  height: 240px;
+  overflow: hidden;
+  width: auto;
+}
+
+.blogSection .blogContainer .singleBlog .imgDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.blogSection .blogContainer .singleBlog .blogInfor {
+  display: -ms-grid;
+  display: grid;
+  row-gap: .500rem;
+  padding: 1rem;
+}
+
+.blogSection .blogContainer .singleBlog .blogInfor .date_tag {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blogSection .blogContainer .singleBlog .blogInfor .date_tag .date, .blogSection .blogContainer .singleBlog .blogInfor .date_tag .tag {
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+  color: var(--textColor);
+  text-transform: capitalize;
+}
+
+.blogSection .blogContainer .singleBlog .blogInfor .date_tag .date .icon, .blogSection .blogContainer .singleBlog .blogInfor .date_tag .tag .icon {
+  color: var(--yellowColor);
+}
+
+.blogSection .blogContainer .singleBlog .blogInfor .blogTitle {
+  font-weight: 600;
+  font-size: var(--normalFont);
+}
+
+.blogSection .blogContainer .singleBlog .blogInfor .blogDescription {
+  color: var(--textColor);
+}
+
+.blogSection .blogContainer .singleBlog .blogInfor button {
+  background: var(--yellowColor);
+  cursor: pointer;
+}
+
+.blogSection .blogContainer .singleBlog .blogInfor button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--bgColor);
+  font-weight: 600;
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+}
+
+.blogSection .blogContainer .singleBlog .blogInfor button:hover {
+  background: var(--yellowHoverColor);
+}
+
+.blogSection .blogContainer .singleBlog .blogInfor button:hover a {
+  color: var(--bgColor);
+}
+
+.testimonials .sectionContent .singleReview {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  border-radius: var(--borderRadius);
+  border-bottom: 2px solid var(--yellowColor);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 187, 0, 0.187)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, rgba(255, 187, 0, 0.187), rgba(255, 255, 255, 0));
+  overflow: hidden;
+}
+
+.testimonials .sectionContent .singleReview .imgDiv {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--headerColor);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  margin-bottom: 1.5rem;
+  margin: auto;
+}
+
+.testimonials .sectionContent .singleReview .imgDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.testimonials .sectionContent .singleReview .quoteIcon {
+  opacity: .5;
+  color: var(--textColor);
+  padding: .500rem;
+  text-align: center;
+  margin: auto;
+}
+
+.testimonials .sectionContent .singleReview .description {
+  color: var(--textColor);
+  opacity: .8;
+  font-size: var(--smallestFont);
+}
+
+.testimonials .sectionContent .singleReview small {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  color: var(--textColor);
+  font-size: var(--smallestFont);
+}
+
+.testimonials .sectionContent .feedbackBtn {
+  width: 100%;
+  background: var(--yellowColor);
+  color: white;
+  -webkit-column-gap: .5rem;
+          column-gap: .5rem;
+}
+
+.testimonials .sectionContent .feedbackPage {
+  position: fixed;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(149, 149, 149, 0.391);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  z-index: 2000;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: var(--bgColor);
+  border-radius: var(--borderRadius);
+  padding: 2rem;
+  -webkit-animation: move .5s ease-in;
+          animation: move .5s ease-in;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm .closePage {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: var(--bgColor);
+  border-radius: 50%;
+  top: -15px;
+  right: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm .closePage .icon {
+  color: var(--yellowColor);
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm .closePage:hover .icon {
+  color: var(--redColor);
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm .feedbackTitle {
+  display: block;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm .feedbackTitle .icon {
+  margin-left: .500rem;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form {
+  display: -ms-grid;
+  display: grid;
+  row-gap: .8rem;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: .300rem;
+  font-size: var(--smallestFont);
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form input, .testimonials .sectionContent .feedbackPage .feedbackForm form textarea {
+  width: 100%;
+  padding: .5rem 1rem;
+  border-radius: var(--borderRadius);
+  background: var(--headerColor);
+  border: 1px solid var(--borderColor);
+  outline: none;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form input:focus, .testimonials .sectionContent .feedbackPage .feedbackForm form textarea:focus {
+  border: 1px solid var(--yellowColor);
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form input::-webkit-input-placeholder, .testimonials .sectionContent .feedbackPage .feedbackForm form textarea::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form input:-ms-input-placeholder, .testimonials .sectionContent .feedbackPage .feedbackForm form textarea:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form input::-ms-input-placeholder, .testimonials .sectionContent .feedbackPage .feedbackForm form textarea::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form input::placeholder, .testimonials .sectionContent .feedbackPage .feedbackForm form textarea::placeholder {
+  opacity: .4;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form textarea {
+  height: 200px;
+  width: 100%;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form #customerPicture {
+  display: none;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form .submitBtn {
+  background: var(--yellowColor);
+  color: var(--bgColor);
+  padding: .8rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.testimonials .sectionContent .feedbackPage .feedbackForm form .submitBtn:hover {
+  background: var(--yellowHoverColor);
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.testimonials .sectionContent .showPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hiringSection .sectionContent {
+  padding: 2rem;
+  border-top-left-radius: var(--borderRadius);
+  border-bottom-right-radius: var(--borderRadius);
+  background: var(--yellowColor);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  border: 3px dashed var(--redColor);
+}
+
+.hiringSection .sectionContent .sectionText {
+  text-align: center;
+}
+
+.hiringSection .sectionContent .sectionText h1 {
+  font-size: var(--normalFont);
+  color: var(--redColor);
+}
+
+.hiringSection .sectionContent .sectionText .postTitle {
+  font-weight: 600;
+}
+
+.hiringSection .sectionContent .sectionText .jobDescription {
+  padding: 1rem 0;
+  color: var(--textColor);
+}
+
+.hiringSection .sectionContent .sectionText button {
+  margin: 1rem auto;
+  color: var(--bgColor);
+}
+
+.hiringSection .sectionContent .imgDiv {
+  height: 100%;
+}
+
+.hiringSection .sectionContent .imgDiv img {
+  height: 100%;
+  width: 100%;
+  -webkit-filter: sepia(1);
+          filter: sepia(1);
+}
+
+.hiringSection .sectionContent .applicationPage {
+  position: fixed;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: rgba(149, 149, 149, 0.391);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  z-index: 2000;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: var(--bgColor);
+  border-radius: var(--borderRadius);
+  padding: 2rem;
+  -webkit-animation: move .5s ease-in;
+          animation: move .5s ease-in;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm .closePage {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: var(--bgColor);
+  border-radius: 50%;
+  top: -15px;
+  right: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm .closePage .icon {
+  color: var(--yellowColor);
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm .closePage:hover .icon {
+  color: var(--redColor);
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm .applicationTitle {
+  display: block;
+  padding-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form {
+  display: -ms-grid;
+  display: grid;
+  row-gap: .8rem;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: .300rem;
+  font-size: var(--smallestFont);
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form input, .hiringSection .sectionContent .applicationPage .applicationForm form textarea {
+  width: 100%;
+  padding: .5rem 1rem;
+  border-radius: var(--borderRadius);
+  background: var(--headerColor);
+  border: 1px solid var(--borderColor);
+  outline: none;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form input:focus, .hiringSection .sectionContent .applicationPage .applicationForm form textarea:focus {
+  border: 1px solid var(--yellowColor);
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form input::-webkit-input-placeholder, .hiringSection .sectionContent .applicationPage .applicationForm form textarea::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form input:-ms-input-placeholder, .hiringSection .sectionContent .applicationPage .applicationForm form textarea:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form input::-ms-input-placeholder, .hiringSection .sectionContent .applicationPage .applicationForm form textarea::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form input::placeholder, .hiringSection .sectionContent .applicationPage .applicationForm form textarea::placeholder {
+  opacity: .4;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form textarea {
+  height: 100px;
+  width: 100%;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form #candidatePic, .hiringSection .sectionContent .applicationPage .applicationForm form #candidateCV {
+  display: none;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form .submitBtn {
+  background: var(--yellowColor);
+  color: var(--bgColor);
+  padding: .8rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hiringSection .sectionContent .applicationPage .applicationForm form .submitBtn:hover {
+  background: var(--yellowHoverColor);
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.hiringSection .sectionContent .showPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer {
+  background: var(--headerColor);
+}
+
+.footer .sectionContent {
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.footer .sectionContent .footerCol {
+  display: -ms-grid;
+  display: grid;
+  padding: 1rem;
+}
+
+.footer .sectionContent .footerCol .location {
+  display: block;
+  padding: .500rem 0;
+  font-size: var(--smallFont);
+}
+
+.footer .sectionContent .footerCol .socialDiv {
+  -webkit-column-gap: .5rem;
+          column-gap: .5rem;
+}
+
+.footer .sectionContent .footerCol .socialDiv .icon {
+  background: var(--yellowColor);
+  padding: .300rem;
+  border-radius: 50%;
+  color: var(--bgColor);
+}
+
+.footer .sectionContent .footerCol .socialDiv .icon:hover {
+  background: var(--yellowHoverColor);
+}
+
+.footer .sectionContent .footerCol .footerTitle {
+  display: block;
+  padding-bottom: .500rem;
+  font-weight: 600;
+  color: var(--textColor);
+}
+
+.footer .sectionContent .footerCol .description {
+  font-size: var(--smallestFont);
+  color: var(--textColor);
+  padding-bottom: .500rem;
+}
+
+.footer .sectionContent .footerCol input {
+  display: block;
+  width: 100%;
+  outline: none;
+  padding: .5rem 1.5rem;
+  border-radius: var(--borderRadius);
+}
+
+.footer .sectionContent .footerCol .emialInput {
+  margin-bottom: .500rem;
+  background: var(--greyColor);
+  border: 1px solid var(--borderColor);
+}
+
+.footer .sectionContent .footerCol .newsLetterBtn {
+  background: var(--yellowColor);
+  border: none;
+  color: var(--bgColor);
+  cursor: pointer;
+}
+
+.footer .sectionContent .footerCol .links {
+  display: -ms-grid;
+  display: grid;
+  row-gap: .500rem;
+  font-size: var(--smallestFont);
+}
+
+.footer .sectionContent .footerCol .links a {
+  color: var(--textColor);
+}
+
+.footer .sectionContent .footerCol .links a:hover {
+  -webkit-transform: translateX(7px);
+          transform: translateX(7px);
+  color: var(--yellowHoverColor);
+}
+
+.footer .copyright {
+  width: 100%;
+  padding: 2rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  text-align: center;
+  border-top: 1px solid var(--textColor);
+  font-weight: 600;
+  font-size: var(--smallestFont);
+}
+
+.details .sectionContainer {
+  width: 100%;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.details .sectionContainer .itemImageDiv {
+  width: 100%;
+  border-radius: var(--borderRadius);
+}
+
+.details .sectionContainer .itemImageDiv .mainImage {
+  height: 200px;
+  width: auto;
+  padding: 1rem;
+  background: var(--greyColor);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  border-radius: var(--borderRadius);
+  margin-bottom: 1rem;
+}
+
+.details .sectionContainer .itemImageDiv .mainImage img {
+  height: 100%;
+  width: auto;
+}
+
+.details .sectionContainer .itemImageDiv .smallImages {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .2rem;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.details .sectionContainer .itemImageDiv .smallImages .smallImag {
+  height: 50px;
+  width: 50px;
+  background: var(--greyColor);
+  border-radius: var(--borderRadius);
+  border: 5px solid var(--greyColor);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.details .sectionContainer .itemImageDiv .smallImages .smallImag img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--borderRadius);
+}
+
+.details .sectionContainer .itemImageDiv .smallImages .smallImag:hover {
+  border: 5px solid var(--yellowColor);
+  background: var(--yellowColor);
+}
+
+.details .sectionContainer .itemInfor {
+  display: -ms-grid;
+  display: grid;
+  row-gap: .500rem;
+  padding-top: 1rem;
+}
+
+.details .sectionContainer .itemInfor .itemName {
+  font-weight: 600;
+}
+
+.details .sectionContainer .itemInfor .rating {
+  color: var(--yellowColor);
+}
+
+.details .sectionContainer .itemInfor .price {
+  color: var(--redColor);
+  font-weight: 600;
+  font-size: var(--smallFont);
+}
+
+.details .sectionContainer .itemInfor .description {
+  max-width: 100%;
+  font-size: var(--smallFont);
+  color: var(--textColor);
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--borderColor);
+}
+
+.details .sectionContainer .itemInfor .formDiv form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.details .sectionContainer .itemInfor .formDiv form label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: .300rem;
+  font-size: var(--smallestFont);
+}
+
+.details .sectionContainer .itemInfor .formDiv form input {
+  width: 50px;
+  padding: .5rem 1rem;
+  border-radius: var(--borderRadius);
+  background: var(--headerColor);
+  border: 1px solid var(--borderColor);
+  outline: none;
+}
+
+.details .sectionContainer .itemInfor .formDiv form input:focus {
+  border: 1px solid var(--yellowColor);
+}
+
+.details .sectionContainer .itemInfor .formDiv form input::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.details .sectionContainer .itemInfor .formDiv form input:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.details .sectionContainer .itemInfor .formDiv form input::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.details .sectionContainer .itemInfor .formDiv form input::placeholder {
+  opacity: .4;
+}
+
+.details .sectionContainer .itemInfor .formDiv button {
+  background: var(--yellowColor);
+  border: 1.5px solid var(--yellowColor);
+}
+
+.details .sectionContainer .itemInfor .formDiv button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--bgColor);
+  font-weight: 600;
+  -webkit-column-gap: .300rem;
+          column-gap: .300rem;
+}
+
+.details .sectionContainer .itemInfor .formDiv button:hover {
+  background: var(--yellowHoverColor);
+}
+
+.details .sectionContainer .itemInfor .formDiv button:hover a {
+  color: var(--bgColor);
+}
+
+.details .sectionContainer .additionalInformation {
+  padding: 1rem 0;
+}
+
+.details .sectionContainer .additionalInformation .title {
+  width: 100%;
+  display: block;
+  background: var(--greyColor);
+  padding: .500rem 1rem;
+  color: var(--textColor);
+  border-radius: var(--borderRadius);
+}
+
+.details .sectionContainer .additionalInformation .description {
+  max-width: 100%;
+  font-size: var(--smallFont);
+  color: var(--textColor);
+  padding: 1rem 0 0;
+}
+
+.details .relatedItems {
+  padding: 2rem 0;
+}
+
+.details .relatedItems .title {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: 1rem;
+  font-weight: 600;
+  font-size: var(--normalFont);
+  text-align: center;
+}
+
+.cartSection .pageTitle {
+  font-size: var(--normalFont);
+  color: var(--textColor);
+  display: block;
+  margin-bottom: 1rem;
+  padding: .500rem 1rem;
+  background-color: var(--greyColor);
+}
+
+.cartSection .cartTitle {
+  display: block;
+  font-size: var(--smallFont);
+  color: var(--textColor);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.cartSection .cartItems {
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--borderColor);
+  row-gap: 1rem;
+}
+
+.cartSection .cartItems .singleItem {
+  position: relative;
+  padding: 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: var(--greyColor);
+  border-radius: var(--borderRadius);
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.cartSection .cartItems .singleItem:hover {
+  background: var(--headerColor);
+}
+
+.cartSection .cartItems .singleItem .itemImage {
+  height: 50px;
+  width: 50px;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  padding: .300rem;
+}
+
+.cartSection .cartItems .singleItem .itemImage img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--borderRadius);
+}
+
+.cartSection .cartItems .singleItem .itemDetails {
+  display: -ms-grid;
+  display: grid;
+  color: var(--textColor);
+}
+
+.cartSection .cartItems .singleItem .itemDetails .itemName {
+  font-weight: 600;
+}
+
+.cartSection .cartItems .singleItem .itemDetails .quatity {
+  font-size: var(--smallFont);
+}
+
+.cartSection .cartItems .singleItem .itemDetails .quatity strong {
+  margin-left: .300rem;
+}
+
+.cartSection .cartItems .singleItem .itemPrice {
+  font-weight: 600;
+  color: var(--redColor);
+}
+
+.cartSection .cartItems .singleItem .deleteIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cartSection .cartItems .singleItem .deleteIcon:hover .icon {
+  color: var(--redColor);
+}
+
+.cartSection .cartItems .singleItem .deleteIcon .icon {
+  color: var(--yellowColor);
+}
+
+.cartSection .grandTotal .priceDiv {
+  width: 100%;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.cartSection .grandTotal .priceDiv .total {
+  font-weight: 600;
+  color: var(--textColor);
+  font-size: var(--smallFont);
+}
+
+.cartSection .grandTotal .priceDiv .total strong {
+  margin-left: .5rem;
+}
+
+.cartSection .grandTotal .priceDiv .couponForm {
+  -webkit-column-gap: .500rem;
+          column-gap: .500rem;
+}
+
+.cartSection .grandTotal .priceDiv .couponForm input {
+  width: 120px;
+  padding: .5rem 1rem;
+  border-radius: var(--borderRadius);
+  background: var(--headerColor);
+  border: 1px solid var(--borderColor);
+  outline: none;
+}
+
+.cartSection .grandTotal .priceDiv .couponForm input:focus {
+  border: 1px solid var(--yellowColor);
+}
+
+.cartSection .grandTotal .priceDiv .couponForm input::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.cartSection .grandTotal .priceDiv .couponForm input:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.cartSection .grandTotal .priceDiv .couponForm input::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.cartSection .grandTotal .priceDiv .couponForm input::placeholder {
+  opacity: .4;
+}
+
+.cartSection .grandTotal .priceDiv .couponForm .couponBtn {
+  background: var(--yellowColor);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--bgColor);
+  border: none;
+  cursor: pointer;
+}
+
+.cartSection .grandTotal .priceDiv .couponForm .couponBtn:hover {
+  background: var(--yellowHoverColor);
+}
+
+.cartSection .grandTotal button {
+  width: 100%;
+  max-width: 600px;
+  background: var(--yellowColor);
+  color: var(--bgColor);
+  padding: .8rem 1.5rem;
+  cursor: pointer;
+}
+
+.cartSection .grandTotal button a {
+  color: white;
+  -webkit-column-gap: .500rem;
+          column-gap: .500rem;
+}
+
+.cartSection .grandTotal button:hover {
+  background: var(--yellowHoverColor);
+}
+
+.cartSection .checkOutPage {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.cartSection .checkOutPage .pageTitle {
+  font-size: var(--smallestFont);
+}
+
+.cartSection .checkOutPage form {
+  display: -ms-grid;
+  display: grid;
+  padding: 1rem;
+  row-gap: .8rem;
+}
+
+.cartSection .checkOutPage form label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: .300rem;
+  font-size: var(--smallestFont);
+}
+
+.cartSection .checkOutPage form label small {
+  font-size: var(--smallestFont);
+}
+
+.cartSection .checkOutPage form input, .cartSection .checkOutPage form textarea, .cartSection .checkOutPage form select {
+  width: 100%;
+  padding: .5rem 1rem;
+  border-radius: var(--borderRadius);
+  background: var(--headerColor);
+  border: 1px solid var(--borderColor);
+  outline: none;
+}
+
+.cartSection .checkOutPage form input:focus, .cartSection .checkOutPage form textarea:focus, .cartSection .checkOutPage form select:focus {
+  border: 1px solid var(--yellowColor);
+}
+
+.cartSection .checkOutPage form input::-webkit-input-placeholder, .cartSection .checkOutPage form textarea::-webkit-input-placeholder, .cartSection .checkOutPage form select::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.cartSection .checkOutPage form input:-ms-input-placeholder, .cartSection .checkOutPage form textarea:-ms-input-placeholder, .cartSection .checkOutPage form select:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.cartSection .checkOutPage form input::-ms-input-placeholder, .cartSection .checkOutPage form textarea::-ms-input-placeholder, .cartSection .checkOutPage form select::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.cartSection .checkOutPage form input::placeholder, .cartSection .checkOutPage form textarea::placeholder, .cartSection .checkOutPage form select::placeholder {
+  opacity: .4;
+}
+
+.cartSection .checkOutPage form small {
+  color: var(--textColor);
+  font-style: italic;
+}
+
+.cartSection .checkOutPage form small blockquote {
+  color: var(--redColor);
+}
+
+.cartSection .checkOutPage form .submitBtn {
+  background: var(--yellowColor);
+  color: var(--bgColor);
+  padding: .8rem 1.5rem;
+  font-weight: 500;
+  font-weight: 600;
+}
+
+.cartSection .checkOutPage form .submitBtn:hover {
+  background: var(--yellowHoverColor);
+}
+
+.cartSection .showCheckOutPage {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 1rem 0;
+}
+
+.designImage1,
+.designImage2,
+.designImage3,
+.designImage4,
+.designImage5,
+.designImage6,
+.designImage7 {
+  position: absolute;
+}
+
+.designImage1 {
+  top: 0;
+  right: 0;
+  width: 40%;
+}
+
+.designImage2 {
+  top: 70%;
+  width: 5%;
+  left: 10%;
+  -webkit-transform: translate(190deg);
+          transform: translate(190deg);
+}
+
+.designImage3 {
+  top: 60rem;
+  width: 5%;
+  right: 20%;
+  -webkit-transform: translate(190deg);
+          transform: translate(190deg);
+}
+
+.designImage4 {
+  top: 115rem;
+  width: 5%;
+  right: 30%;
+  -webkit-transform: translate(190deg);
+          transform: translate(190deg);
+}
+
+.designImage5 {
+  top: 160rem;
+  width: 5%;
+  left: 10%;
+  -webkit-transform: translate(190deg);
+          transform: translate(190deg);
+}
+
+.designImage6 {
+  top: 240rem;
+  width: 5%;
+  right: 20%;
+  -webkit-transform: translate(190deg);
+          transform: translate(190deg);
+}
+
+.designImage7 {
+  top: 240rem;
+  width: 5%;
+  left: 20%;
+  -webkit-transform: translate(190deg);
+          transform: translate(190deg);
+}
+
+.menuSection {
+  position: fixed;
+  width: 70%;
+  z-index: 5000;
+  background: var(--whiteColor);
+  padding: 1rem;
+  left: -100%;
+  top: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.menuSection .leftIcon {
+  font-size: var(--normalFont);
+  color: var(--textColor);
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.menuSection .leftIcon:hover {
+  color: var(--yellowColor);
+}
+
+.menuSection .logoDiv {
+  margin: 1rem 0;
+  color: var(--textColor);
+  margin-right: 1rem;
+}
+
+.menuSection .logoDiv h1 {
+  font-weight: 600;
+}
+
+.menuSection .logoDiv .logoSubTitle {
+  font-size: var(--smallFont);
+  opacity: .6;
+}
+
+.menuSection .menuList {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 1rem;
+}
+
+.menuSection .menuList .menuItem {
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  color: var(--textColor);
+  font-weight: 600;
+}
+
+.menuSection .menuList .menuItem:hover {
+  background: var(--yellowColor);
+  color: var(--whiteColor);
+}
+
+.showSection {
+  left: 0;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+}
+
+.header .hero {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: .500rem;
+}
+
+.header .headerRight {
+  -webkit-column-gap: .500rem;
+          column-gap: .500rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .headerRight .messageDiv {
+  position: relative;
+}
+
+.header .headerRight .messageDiv .messageCount {
+  position: absolute;
+  background: var(--redColor);
+  height: 15px;
+  width: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  color: var(--bgColor);
+  top: -5px;
+  right: -5px;
+}
+
+.header .headerRight .accountDiv {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 3px solid var(--bgColor);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  overflow: hidden;
+}
+
+.header .headerRight .accountDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.adminDashboard, .ordersSection {
+  margin-top: 1.5rem;
+}
+
+.adminDashboard .intro, .ordersSection .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .500rem;
+  color: var(--textColor);
+}
+
+.adminDashboard .intro .titleDiv .title, .ordersSection .intro .titleDiv .title {
+  font-weight: 600;
+}
+
+.adminDashboard .intro .titleDiv .subTitle, .ordersSection .intro .titleDiv .subTitle {
+  opacity: .7;
+}
+
+.adminDashboard .calenderDiv, .adminDashboard .summaryItem, .ordersSection .calenderDiv, .ordersSection .summaryItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  padding: .5rem;
+  background: var(--whiteColor);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: var(--borderRadius);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+}
+
+.adminDashboard .calenderDiv .icon, .adminDashboard .calenderDiv .int, .adminDashboard .summaryItem .icon, .adminDashboard .summaryItem .int, .ordersSection .calenderDiv .icon, .ordersSection .calenderDiv .int, .ordersSection .summaryItem .icon, .ordersSection .summaryItem .int {
+  font-size: 30px;
+}
+
+.adminDashboard .calenderDiv .dateDiv, .adminDashboard .calenderDiv .infor, .adminDashboard .summaryItem .dateDiv, .adminDashboard .summaryItem .infor, .ordersSection .calenderDiv .dateDiv, .ordersSection .calenderDiv .infor, .ordersSection .summaryItem .dateDiv, .ordersSection .summaryItem .infor {
+  display: -ms-grid;
+  display: grid;
+  gap: .200rem;
+}
+
+.adminDashboard .summaryDiv, .ordersSection .summaryDiv {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.adminDashboard .summaryDiv .summaryItem, .ordersSection .summaryDiv .summaryItem {
+  padding: 1.5rem 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--whiteColor);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  width: 100%;
+}
+
+.adminDashboard .summaryDiv .summaryItem .cardIcon, .ordersSection .summaryDiv .summaryItem .cardIcon {
+  font-size: 45px;
+  height: 60px;
+  width: 60px;
+  background-color: var(--yellowColor);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.adminDashboard .summaryDiv .summaryItem .infor, .ordersSection .summaryDiv .summaryItem .infor {
+  color: var(--textColor);
+  gap: .100rem;
+}
+
+.adminDashboard .summaryDiv .summaryItem .infor .cartTitle, .ordersSection .summaryDiv .summaryItem .infor .cartTitle {
+  font-size: var(--smallFont);
+}
+
+.adminDashboard .summaryDiv .summaryItem .infor .rate, .ordersSection .summaryDiv .summaryItem .infor .rate {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: .5;
+}
+
+.adminDashboard .summaryDiv .summaryItem .infor .rate .greenColor, .ordersSection .summaryDiv .summaryItem .infor .rate .greenColor {
+  font-size: var(--smallestFont);
+  margin-right: .500rem;
+  color: green;
+  opacity: 1;
+}
+
+.adminDashboard .summaryDiv .summaryItem .infor .rate .redColor, .ordersSection .summaryDiv .summaryItem .infor .rate .redColor {
+  font-size: var(--smallestFont);
+  margin-right: .500rem;
+  color: var(--redColor);
+  opacity: 1;
+}
+
+.ordersSection .ordersBody {
+  background: white;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border-radius: var(--borderRadius);
+}
+
+.ordersSection .ordersBody table {
+  width: 100%;
+  color: var(--textColor);
+  border-spacing: 0;
+}
+
+.ordersSection .ordersBody table .tableRow {
+  width: 100%;
+}
+
+.ordersSection .ordersBody table .tableRow.tableRow:not(.tableRow:nth-child(1)):hover {
+  background: var(--bgColor);
+}
+
+.ordersSection .ordersBody table .tableRow td {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.ordersSection .ordersBody table .tableRow .id {
+  font-weight: 600;
+}
+
+.ordersSection .ordersBody table .tableRow img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ordersSection .ordersBody table .tableRow .displayNone {
+  display: none;
+  -webkit-transform: translate();
+          transform: translate();
+}
+
+@media screen and (min-width: 546px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .bannerSection .textDiv .bannerTitle {
+    padding-right: 1rem;
+  }
+  .bannerSection .imageDiv img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .offerSection .sectionContent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+  }
+  .relatedItems .itemContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .aboutSection .imageDiv {
+    width: 80%;
+  }
+  .blogSection .blogContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .sectionContent {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .hiringSection .sectionContent .sectionText {
+    padding: 1rem 1.5rem;
+  }
+  .hiringSection .imgDiv {
+    margin: auto;
+    width: 80%;
+  }
+  .details .sectionContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+  }
+  .details .sectionContainer .additionalInformation {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header {
+    padding: 2rem;
+  }
+  .header #toggleIcon, .header #closeNavBar, .header .tagline {
+    display: none;
+  }
+  .header .logoDiv {
+    -webkit-box-ordinal-group: -1;
+        -ms-flex-order: -2;
+            order: -2;
+  }
+  .offerSection .sectionContent {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .relatedItems .itemContainer {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .blogSection .blogContainer {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .footer .sectionContent {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .bannerSection {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .bannerSection .textDiv {
+    padding-left: 1rem;
+  }
+  .bannerSection .textDiv .bannerTitle {
+    padding-right: 1rem;
+  }
+  .bannerSection .imageDiv img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .aboutSection .sectionContent, .tabelReservation .sectionContent, .hiringSection .sectionContent, .login .sectionContent {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+  .aboutSection .sectionContent .textDiv, .tabelReservation .sectionContent .textDiv, .hiringSection .sectionContent .textDiv, .login .sectionContent .textDiv {
+    padding-left: 1rem;
+  }
+  .aboutSection .sectionContent .imgDiv, .tabelReservation .sectionContent .imgDiv, .hiringSection .sectionContent .imgDiv, .login .sectionContent .imgDiv {
+    height: 100%;
+  }
+  .testimonials .feedbackBtn {
+    width: 50% !important;
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .section {
+    padding: 6rem 0 4rem;
+  }
+  .container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .header {
+    padding: 2.5rem 8rem;
+  }
+  .header .navBar .navLists {
+    gap: 3rem;
+  }
+  .bannerSection {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .bannerSection .textDiv {
+    padding-left: 7rem;
+  }
+  .bannerSection .textDiv .bannerTitle {
+    padding-right: 1rem;
+  }
+  .bannerSection .imageDiv img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  :root {
+    --headerHeight: 4rem;
+    --biggestFont: 3rem;
+    --normalFont: 1.8rem;
+    --smallFont: 1.3rem;
+    --smallestFont: .950rem;
+    --borderRadius: .5rem;
+  }
+  .container {
+    width: 70%;
+    margin: auto;
+  }
+  .header {
+    padding: 2.5rem 20rem;
+  }
+  .header .navBar .navLists {
+    gap: 3rem;
+  }
+  .bannerSection {
+    width: 65%;
+  }
+  .bannerSection .textDiv {
+    padding: 7rem 0 0 7rem;
+  }
+  .bannerSection .textDiv .bannerTitle {
+    padding-right: 1rem;
+  }
+  .offerSection .sectionContent, .aboutSection .sectionContent {
+    width: 80%;
+    padding: 5rem 0;
+  }
+  .hiringSection .sectionContent {
+    padding: 5rem;
+  }
+  .hiringSection .sectionContent .sectionText .jobDescription {
+    display: block;
+    padding: 1rem 5rem;
+  }
+  .footer .sectionContainer .sectionContent {
+    padding: 5rem 0;
+  }
+  .relatedItems .itemContainer {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    padding: 5rem 0;
+  }
+  .details .sectionContainer {
+    width: 90%;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    padding: 5rem 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

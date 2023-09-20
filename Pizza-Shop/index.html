@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fdy</title>
+    <!-- link css  -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- link font -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- link swiper css -->
+    <link rel="stylesheet" href="./swiper-bundle.min.css">
+
+</head>
+<body>
+   <!-- header section Starts -->
+    <header class="header flex">
+        <!-- navBar div -->
+        <div class="navBar" id="navBar">
+           <ul class="navLists flex">
+               <li class="navItem"><a href="index.html" class="navLink">Home</a></li>
+               <li class="navItem"><a href="#menu" class="navLink">Menu</a></li>
+               <li class="navItem"><a href="detailsPage.html" class="navLink">Shop</a></li>
+               <li class="navItem"><a href="#testimonial" class="navLink">Testimonial</a></li>
+               <li class="navItem"><a href="#blog" class="navLink">Blog</a></li>
+               <li class="navItem tableBtn"><a href="#table" class="navLink">Book Table</a></li>
+           </ul>
+
+           <div id="closeNavBar">
+            <i class='bx bxs-x-circle icon' ></i>
+           </div>
+
+           <div class="tagline">
+               <span><strong>Foodie Restaurant</strong> We serve unfogottable taste and with everlasting memories!</span>
+           </div>
+        </div>
+        <!-- navBar Toggle Icon -->
+        <div id="toggleIcon">
+            <i class='bx bx-grid-alt icon' ></i>
+        </div>
+        <!-- logo Div -->
+        <div class="logoDiv">
+            <a href="index.html">oo.</a>
+        </div>
+
+        <!-- navBar information Div -->
+        <div class="navBarInfor flex">
+            <div class="cartDiv">
+                <a href="login.html"><i class='bx bx-shopping-bag icon'></i></a>
+                <span class="cartCount">0</span>
+            </div>
+            <div class="contactDiv flex">
+                <i class='bx bxs-phone-call icon' ></i>
+                <span class="phone">+9710 000 000</span>
+            </div>
+            <div class="searchDiv">
+                <i class='bx bx-search-alt icon searchIcon' ></i>
+                <div class="searchBox">
+                    <form method="POST">
+                        <input type="text" name="searchValue" placeholder="Search here...." class="inputBox" required>
+                        <input type="submit" name="submit" class="searchBtn">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </header>
+   <!-- header section Ends -->
+
+     <!-- banner section Starts -->
+     <section class="bannerSection grid" id="home">
+         <div class="textDiv">
+             <div class="redBanner">
+                 <span>24 Hours Home delivery</span>
+             </div>
+             <h1 class="bannerTitle">
+                 THE DELIGHT JUMBO BURGER
+             </h1>
+             <div class="list">
+                 <span class="listContent flex">
+                    <i class='bx bxs-check-circle icon'></i>
+                    Aliquam quo cum quos numquam
+                 </span>
+                 <span class="listContent flex">
+                    <i class='bx bxs-check-circle icon'></i>
+                    Consectetur adipisicing elit.
+                 </span>
+                 <span class="listContent flex">
+                    <i class='bx bxs-check-circle icon'></i>
+                    Voluptate velit ullam, dolorem.
+                 </span>
+             </div>
+             <button class="flex">
+                <i class='bx bxs-shopping-bag icon' ></i>
+                 Order Now
+             </button>
+         </div>
+         <div class="imageDiv flex">
+             <img src="./assets/bannerBurger.png" alt="">
+         </div>
+     </section>
+     <!-- banner section Ends -->
+
+     <!-- Today's special menu section -->
+     <section class="container section offerSection" id="offer">
+         <div class="sectionIntro">
+             <span class="introText">Items On Discount</span>
+             <h2 class="heading">TODAY'S SPECIAL MENU</h2>
+             <img src="./assets/titleDesign.png" alt="Title Design">
+         </div>
+
+         <div class="sectionContent grid">
+              <div class="itemWrapper">
+                   <div class="imgDiv flex">
+                       <img src="./assets/p1.png" alt="Pizza Image">
+                   </div>
+                   <div class="itemInfor">
+                      <div class="price_rating flex">
+                        <div class="price">
+                            <h1>$18.0</h1>
+                        </div>
+                        <div class="rating flex">
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star-half' ></i>
+                        </div>
+                      </div>
+                      <span class="itemName">BBQ Pizza TinTin</span>
+                      <p class="description">Gorgonzola, mozzarella, taleggio Red onions, capers, olives</p>
+
+                      <button>
+                        <a href="detailsPage.html">
+                            
+                            View Item
+                            <i class='bx bx-right-top-arrow-circle icon' ></i>
+                        </a>
+                     </button>
+                   </div>
+                   
+
+              </div>
+
+              <div class="itemWrapper">
+                   <div class="imgDiv flex">
+                       <img src="./assets/p3.png" alt="Pizza Image">
+                   </div>
+                   <div class="itemInfor">
+                      <div class="price_rating flex">
+                        <div class="price">
+                            <h1>$16.0</h1>
+                        </div>
+                        <div class="rating flex">
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star' ></i>
+                        </div>
+                      </div>
+                      <span class="itemName">Pizza Kingo</span>
+                      <p class="description">Gorgonzola, mozzarella, taleggio Red onions, capers, olives</p>
+
+                      <button>
+                        <a href="detailsPage.html">
+                            
+                            View Item
+                            <i class='bx bx-right-top-arrow-circle icon' ></i>
+                        </a>
+                     </button>
+                   </div>
+                   
+
+              </div>
+
+              <div class="itemWrapper">
+                   <div class="imgDiv flex">
+                       <img src="./assets/p7.png" alt="Burger Image">
+                   </div>
+                   <div class="itemInfor">
+                      <div class="price_rating flex">
+                        <div class="price">
+                            <h1>$13.0</h1>
+                        </div>
+                        <div class="rating flex">
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star' ></i>
+                         <i class='bx bxs-star-half' ></i>
+                        </div>
+                      </div>
+                      <span class="itemName">Chicken Sandwich</span>
+                      <p class="description">Gorgonzola, mozzarella, taleggio Red onions, capers, olives</p>
+
+                      <button>
+                        <a href="detailsPage.html">
+                            
+                            View Item
+                            <i class='bx bx-right-top-arrow-circle icon' ></i>
+                        </a>
+                     </button>
+                   </div>
+                   
+
+              </div>
+         </div>
+     </section>
+     <!-- Today's special menu section ends -->
+
+     <!--About section starts  -->
+     <section class="section container aboutSection">
+         <div class="sectionContent grid">
+            <div class="textDiv">
+                <div class="redBanner">
+                    <span>100% DEDICATION</span>
+                </div>
+                <h1 class="bannerTitle">
+                    We Created Best Dinning Experiance For You & Your Family
+                </h1>
+                <div class="list">
+                    <span class="listContent flex">
+                       <i class='bx bxs-check-circle icon'></i>
+                       Aliquam quo cum quos numquam
+                    </span>
+                    <span class="listContent flex">
+                       <i class='bx bxs-check-circle icon'></i>
+                       Consectetur adipisicing elit.
+                    </span>
+                    <span class="listContent flex">
+                       <i class='bx bxs-check-circle icon'></i>
+                       Voluptate velit ullam, dolorem.
+                    </span>
+                </div>
+                <button class="flex">
+                   <a href="#table"><i class='bx bxs-bookmark-alt icon' ></i>
+                    Book Table</a>
+                </button>
+            </div>
+            <div class="imageDiv flex">
+                <img src="./assets/aboutImage.png" alt="">
+            </div>
+         </div>
+     </section>
+     <!--About section ends  -->
+
+     <!-- Menu section start -->
+     <section class="section container menuSection" id="menu">
+        <div class="sectionIntro">
+            <span class="introText">All Online Menu</span>
+            <h2 class="heading">YOUR TODAY'S MEAL</h2>
+            <img src="./assets/titleDesign.png" alt="Title Design">
+        </div>
+
+        <div class="categoriesList flex">
+            <span class="category categoryActive flex" data-filter="all">
+                <i class='bx bxs-baguette icon' ></i>
+                All
+            </span>
+            <span class="category  flex" data-filter="food">
+                <i class='bx bx-bowl-rice icon' ></i>
+
+                Food
+            </span>
+            <span class="category flex" data-filter="drink">
+                <i class='bx bxs-drink icon' ></i>
+                Drinks
+            </span>
+        </div>
+
+        <div class="itemContainer grid">
+            <div class="itemWrapper" data-target="food">
+             <div class="imgDiv">
+                 <img src="./assets/p6.png" alt="Food Image">
+                 <button class=" optionBtn flex">
+                    <a href="detailsPage.html">
+                    View Item <i class='bx bx-right-top-arrow-circle icon' ></i></a>
+                 </button>
+             </div>
+             <div class="itemInfor">
+                 <span class="itemName">Chicken Pizza</span>
+                 <p class="description">Gorgonzola, mozzarella, taleggio Red onions, capers.</p>
+                 <div class="btn_price flex">
+                     <button class="cartBtn">
+                         <a href="login.html">
+                            <i class='bx bxs-shopping-bag icon' ></i>
+                             Add To Cart
+                         </a>
+                     </button>
+                     <h1 class="price">$18.0</h1>
+                 </div>
+             </div>
+             <div class="rating flex">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+               </div>
+            </div>
+            <div class="itemWrapper" data-target="food">
+             <div class="imgDiv">
+                 <img src="./assets/p1.png" alt="Food Image">
+                 <button class=" optionBtn flex">
+                    <a href="detailsPage.html">
+                    View Item <i class='bx bx-right-top-arrow-circle icon' ></i></a>
+                 </button>
+             </div>
+             <div class="itemInfor">
+                 <span class="itemName">BBQ Pizza TinTin</span>
+                 <p class="description">Gorgonzola, mozzarella, taleggio Red onions, capers.</p>
+                 <div class="btn_price flex">
+                     <button class="cartBtn">
+                         <a href="login.html">
+                            <i class='bx bxs-shopping-bag icon' ></i>
+                             Add To Cart
+                         </a>
+                     </button>
+                     <h1 class="price">$12.0</h1>
+                 </div>
+             </div>
+             <div class="rating flex">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+               </div>
+            </div>
+            <div class="itemWrapper" data-target="food">
+             <div class="imgDiv">
+                 <img src="./assets/p2.png" alt="Food Image">
+                 <button class=" optionBtn flex">
+                    <a href="detailsPage.html">
+                    View Item <i class='bx bx-right-top-arrow-circle icon' ></i></a>
+                 </button>
+             </div>
+             <div class="itemInfor">
+                 <span class="itemName">Burger Kingo</span>
+                 <p class="description">Gorgonzola, mozzarella, taleggio Red onions, capers.</p>
+                 <div class="btn_price flex">
+                     <button class="cartBtn">
+                         <a href="login.html">
+                            <i class='bx bxs-shopping-bag icon' ></i>
+                             Add To Cart
+                         </a>
+                     </button>
+                     <h1 class="price">$21.0</h1>
+                 </div>
+             </div>
+             <div class="rating flex">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+               </div>
+            </div>
+            <div class="itemWrapper" data-target="food">
+             <div class="imgDiv">
+                 <img src="./assets/p7.png" alt="Food Image">
+                 <button class=" optionBtn flex">
+                    <a href="detailsPage.html">
+                    View Item <i class='bx bx-right-top-arrow-circle icon' ></i></a>
+                 </button>
+             </div>
+             <div class="itemInfor">
+                 <span class="itemName">Chicken Sandwich</span>
+                 <p class="description">Gorgonzola, mozzarella, taleggio Red onions, capers.</p>
+                 <div class="btn_price flex">
+                     <button class="cartBtn">
+                         <a href="login.html">
+                            <i class='bx bxs-shopping-bag icon' ></i>
+                             Add To Cart
+                         </a>
+                     </button>
+                     <h1 class="price">$20.0</h1>
+                 </div>
+             </div>
+             <div class="rating flex">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+               </div>
+            </div>
+            <div class="itemWrapper" data-target="drink">
+             <div class="imgDiv">
+                 <img src="./assets/p3.png" alt="Food Image">
+                 <button class=" optionBtn flex">
+                    <a href="detailsPage.html">
+                    View Item <i class='bx bx-right-top-arrow-circle icon' ></i></a>
+                 </button>
+             </div>
+             <div class="itemInfor">
+                 <span class="itemName">Chocolate Pizza</span>
+                 <p class="description">Gorgonzola, mozzarella, taleggio Red onions, capers.</p>
+                 <div class="btn_price flex">
+                     <button class="cartBtn">
+                         <a href="login.html">
+                            <i class='bx bxs-shopping-bag icon' ></i>
+                             Add To Cart
+                         </a>
+                     </button>
+                     <h1 class="price">$28.0</h1>
+                 </div>
+             </div>
+             <div class="rating flex">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+               </div>
+            </div>
+            <div class="itemWrapper" data-target="drink">
+             <div class="imgDiv">
+                 <img src="./assets/p7.png" alt="Food Image">
+                 <button class=" optionBtn flex">
+                    <a href="detailsPage.html">
+                    View Item <i class='bx bx-right-top-arrow-circle icon' ></i></a>
+                 </button>
+             </div>
+             <div class="itemInfor">
+                 <span class="itemName">Chicken Sandwich</span>
+                 <p class="description">Gorgonzola, mozzarella, taleggio Red onions, capers.</p>
+                 <div class="btn_price flex">
+                     <button class="cartBtn">
+                         <a href="login.html">
+                            <i class='bx bxs-shopping-bag icon' ></i>
+                             Add To Cart
+                         </a>
+                     </button>
+                     <h1 class="price">$19.0</h1>
+                 </div>
+             </div>
+             <div class="rating flex">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+               </div>
+            </div>
+        </div>
+     </section>
+     <!-- Menu section ends -->
+
+    <!-- Table Reservation Section Starts -->
+    <section class="section container tabelReservation" id="table">
+    <div class="sectionIntro">
+        <span class="introText">Great Dining Experience</span>
+        <h2 class="heading">RESERVE A FAMILY TABLE</h2>
+        <img src="./assets/titleDesign.png" alt="Title Design">
+    </div>
+
+    <div class="sectionContent grid">
+        <div class="imgDiv flex">
+            <h3>Hey, we have a table for you!</h3>
+            <p class="description">Let us prepare for your family and friends!</p>
+        </div>
+        <div class="formDiv">
+            <form method="">
+                <div class="formRow">
+                <label for="name">First Name</label>
+                <input type="text" name="guestName" id="name" placeholder="Enter your first name" required>
+                </div>
+                <div class="formRow">
+                <label for="email">Email</label>
+                <input type="email" name="guestEmail" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="formRow">
+                <label for="phone">Phone Number</label>
+                <input type="number" name="guestPhone" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="formRow">
+                <label for="tl">Number of people</label>
+                <input type="number" name="totalPeople" id="tl" value="1"  required>
+                </div>
+                <div class="formRow">
+                <label for="date_time">Date and time</label>
+                <input type="datetime-local" name="date_time" id="date_time"  required>
+                </div>
+                <div class="formRow">
+                <label for="message">Message</label>
+                <textarea name="guestMessage" id="message" placeholder="Leave us some message!"></textarea>
+                </div>
+                <div class="formRow">
+                
+                <input type="submit" name="submit" value="Reserve It" class="submitBtn">
+                </div>
+
+            </form>
+            <div class="contactNumber">
+                <small>Or</small>
+                <span class="phoneNumber flex">
+                    <i class='bx bxs-phone-call icon'></i>
+                    +971 524 312 309
+                </span>
+                <p>Mobile service availble 24/7</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- Table Reservation Section Ends -->
+
+    <!--Blog section starts  -->
+    <section class="section container blogSection" id="blog">
+    <div class="sectionIntro">
+        <span class="introText">News and Blog</span>
+        <h2 class="heading">SMILES WE BRING TO CLIENTS</h2>
+        <img src="./assets/titleDesign.png" alt="Title Design">
+    </div>
+
+    <div class="blogContainer grid">
+        <div class="singleBlog">
+            <div class="imgDiv">
+                <img src="./assets/people (1).jpg" alt="Client Image">
+            </div>
+            <div class="blogInfor">
+                <div class="date_tag flex">
+                    <div class="date flex">
+                        <i class='bx bxs-calendar icon' ></i>
+                        2021/12/01
+                    </div>
+                    <div class="tag flex">
+                        <i class='bx bxs-purchase-tag icon' ></i>
+                        burger
+                    </div>
+                </div>
+                <h1 class="blogTitle">Do You Think About Cheese Pizza Recipes?</h1>
+                <p class="blogDescription">
+                    We thought thatwe had tasted every kind ofm Pizza until we ordered from thisn restaurant! It really tastes differently.
+                </p>
+                
+                <button class="flex">
+                    <a href="#">
+                        Read More <i class='bx bx-right-top-arrow-circle icon' ></i></a>
+                    </button>
+            </div>
+        </div>
+        <div class="singleBlog">
+            <div class="imgDiv">
+                <img src="./assets/people (7).jpg" alt="Client Image">
+            </div>
+            <div class="blogInfor">
+                <div class="date_tag flex">
+                    <div class="date flex">
+                        <i class='bx bxs-calendar icon' ></i>
+                        2022/02/01
+                    </div>
+                    <div class="tag flex">
+                        <i class='bx bxs-purchase-tag icon' ></i>
+                        pizza
+                    </div>
+                </div>
+                <h1 class="blogTitle">Chicken Strips With New Ingridents Made.</h1>
+                <p class="blogDescription">
+                    We thought thatwe had tasted every kind ofm Pizza until we ordered from thisn restaurant! It really tastes differently.
+                </p>
+                
+                <button class="flex">
+                    <a href="#">
+                        Read More <i class='bx bx-right-top-arrow-circle icon' ></i></a>
+                    </button>
+            </div>
+        </div>
+        <div class="singleBlog">
+            <div class="imgDiv">
+                <img src="./assets/people (5).jpg" alt="Client Image">
+            </div>
+            <div class="blogInfor">
+                <div class="date_tag flex">
+                    <div class="date flex">
+                        <i class='bx bxs-calendar icon' ></i>
+                        2022/03/12
+                    </div>
+                    <div class="tag flex">
+                        <i class='bx bxs-purchase-tag icon' ></i>
+                        juice
+                    </div>
+                </div>
+                <h1 class="blogTitle">Juices made fom our natural ingredients.</h1>
+                <p class="blogDescription">
+                    We thought thatwe had tasted every kind ofm Pizza until we ordered from thisn restaurant! It really tastes differently.
+                </p>
+                
+                <button class="flex">
+                    <a href="#">
+                        Read More <i class='bx bx-right-top-arrow-circle icon' ></i></a>
+                    </button>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--Blog section ends  -->
+
+   <!-- Testimonial Section Starts -->
+   <section class="section container testimonials" id="testimonial">
+    <div class="sectionIntro">
+        <span class="introText">Customers' Reviews</span>
+        <h2 class="heading">CUSTOMER FEEDBACK</h2>
+        <img src="./assets/titleDesign.png" alt="Title Design">
+    </div>
+
+    <div class="sectionContent">
+        <div class="swiperDiv swiper">
+            <div class="swiper-wrapper ">
+                <div class="singleReview swiper-slide">
+                    <div class="imgDiv">
+                        <img src="./assets/people (1).jpg" alt="Customer Image">
+                    </div>
+                    <i class='bx bxs-quote-alt-left icon quoteIcon'></i>
+                    <p class="description">
+                        I love this restaurant because of their services and more so timely deliveries, i higly recommend them!
+                    </p>
+                    <i class='bx bxs-quote-alt-right icon
+                    quoteIcon' ></i>
+                    <small>-- Nisha Alice --</small>
+                </div>
+                <div class="singleReview swiper-slide">
+                    <div class="imgDiv">
+                        <img src="./assets/people (6).jpg" alt="Customer Image">
+                    </div>
+                    <i class='bx bxs-quote-alt-left icon quoteIcon'></i>
+                    <p class="description">
+                        I love this restaurant because of their services and more so timely deliveries, i higly recommend them!
+                    </p>
+                    <i class='bx bxs-quote-alt-right icon
+                    quoteIcon' ></i>
+                    <small>-- Nina Lindsey --</small>
+                </div>
+                <div class="singleReview swiper-slide">
+                    <div class="imgDiv">
+                        <img src="./assets/people (2).jpg" alt="Customer Image">
+                    </div>
+                    <i class='bx bxs-quote-alt-left icon quoteIcon'></i>
+                    <p class="description">
+                        I love this restaurant because of their services and more so timely deliveries, i higly recommend them!
+                    </p>
+                    <i class='bx bxs-quote-alt-right icon
+                    quoteIcon' ></i>
+                    <small>-- Brighet Bonny --</small>
+                </div>
+                <div class="singleReview swiper-slide">
+                    <div class="imgDiv">
+                        <img src="./assets/people (5).jpg" alt="Customer Image">
+                    </div>
+                    <i class='bx bxs-quote-alt-left icon quoteIcon'></i>
+                    <p class="description">
+                        I love this restaurant because of their services and more so timely deliveries, i higly recommend them!
+                    </p>
+                    <i class='bx bxs-quote-alt-right icon
+                    quoteIcon' ></i>
+                    <small>-- Bikas Ipass --</small>
+                </div>
+            </div>
+        </div>
+        
+        <button class="feedbackBtn">
+            I have a feedback! 
+            <i class='bx bx-message-rounded-dots icon' ></i></span>
+        </button>
+     
+
+        <div class="feedbackPage" id="feedbackPage">
+           <div class="feedbackForm">
+            <div class="closePage flex" id="closePageBtn">
+                <i class='bx bxs-x-circle icon' ></i>
+            </div>
+            <span class="feedbackTitle flex">Send in your feedback <i class='bx bx-message-rounded-dots icon' ></i></span>
+            <form action="" method="post">
+                <div class="formRow">
+                <label for="customerName">Name</label>
+                <input type="text" name="customerName" id="customerName" placeholder="Enter your name" required>
+                </div>
+                <div class="formRow">
+                <label for="customerPicture">Picture</label>
+                <input type="file" name="customerPic" id="customerPicture" placeholder="Enter your name" accept=".jpg, .jpeg, .png" required>
+                <i class='bx bx-camera icon' ></i>
+                </div>
+                <div class="formRow">
+                <label for="message">Message</label>
+                <textarea name="guestMessage" id="message" placeholder="Leave us some message!" required></textarea>
+                </div>
+                <div class="formRow">
+                <input type="submit" name="feedback" value="Send" class="submitBtn">
+                </div>
+
+            </form>
+           </div>
+        </div>
+    </div>
+   </section>
+   <!-- Testimonial Section Ends -->
+
+   <!-- Hiring section starts -->
+   <section class="section container hiringSection">
+       <div class="sectionContent grid">
+           <div class="sectionText">
+               <h1>We're Hiring</h1>
+               <span class="postTitle">Delivery Boy</span>
+               <p class="jobDescription">We are looking for a fast paced delivery boy of age between 20-30 passionate to join our team!</p>
+               <button class="applyBtn">
+                   Apply Now <i class='bx bx-right-top-arrow-circle icon' ></i>
+               </button>
+           </div>
+           <div class="imgDiv">
+               <img src="./assets/delivery.png" alt="Delivery Image">
+           </div>
+
+           
+        <div class="applicationPage" id="applicationPage">
+            <div class="applicationForm">
+             <div class="closePage flex" id="closeAplctnBtn">
+                 <i class='bx bxs-x-circle icon' ></i>
+             </div>
+             <span class="applicationTitle">Application Form </span>
+             <form action="" method="post">
+
+                 <div class="formRow">
+                 <label for="candidateName">First Name</label>
+                 <input type="text" name="candidateFName" id="candidateName" placeholder="Enter your name" required>
+                 </div>
+
+                 <div class="formRow">
+                 <label for="candidateLName">Last Name</label>
+                 <input type="text" name="candidateLFName" id="candidateLName" placeholder="Enter your Second name" required>
+                 </div>
+
+                 <div class="formRow">
+                 <label for="candidateEmail">Email</label>
+                 <input type="email" name="candidateEmail" id="candidateEmail" placeholder="Enter your email" required>
+                 </div>
+
+                 <div class="formRow">
+                 <label for="dob">Date of birth</label>
+                 <input type="date" name="dob" id="dob" placeholder="Enter your Second name" required>
+                 </div>
+
+                 <div class="formRow">
+                 <label for="nationality">Nationality</label>
+                 <input type="text" name="nationality" id="nationality" placeholder="Enter your nationality" required>
+                 </div>
+                 
+                 <div class="formRow">
+                 <label for="message">About yourself</label>
+                 <textarea name="guestMessage" id="message" placeholder="Talk about yourself" required></textarea>
+                 </div>
+
+                 <div class="formRow">
+                <label for="candidatePic">Picture</label>
+                <input type="file" name="candidatePic" id="candidatePic" placeholder="Enter your name" accept=".jpg, .jpeg, .png" required>
+                <i class='bx bx-camera icon' ></i>
+                </div>
+
+                 <div class="formRow">
+                <label for="candidateCV">Resume/CV</label>
+                <input type="file" name="candidateCV" id="candidateCV"  accept="pdf, dox, word" required>
+                <i class='bx bx-paperclip icon' ></i>
+                </div>
+                 <div class="formRow">
+                 <input type="submit" name="feedback" value="Send" class="submitBtn">
+                 </div>
+ 
+             </form>
+            </div>
+         </div>
+       </div>
+   </section>
+   <!-- Hiring section ends -->
+
+   <!-- Footer Section Starts  -->
+   <section class="footer">
+       <div class="sectionContainer container">
+         <div class="sectionContent grid">
+             <div class="footerCol">
+              <div class="logoDiv">
+                  <img src="" alt="">Logo
+              </div>
+              <span class="location">
+                71 Pennington Lane Vernon Rockville, CT 06066
+            </span>
+            <div class="socialDiv flex">
+                <a href="#"><i class='bx bxl-facebook-circle icon'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt icon' ></i></a>
+                <a href="#"><i class='bx bxl-whatsapp icon' ></i></a>
+                <a href="#"><i class='bx bxl-twitter icon' ></i></a>
+            </div>
+
+             </div>
+             <div class="footerCol">
+                 <span class="footerTitle">
+                     NEWSLETTER SIGN UP
+                 </span>
+                 <p class="description">
+                    Subscribe to our newsletters now and stay up to date with exclusive offers.
+                 </p>
+                 <form action="" method="">
+                     <input type="emial" name="newsletter" placeholder="Your Email Address.." class="emialInput" required>
+                     <input type="submit" name="newsletterBtn" value="Subscribe" class="newsLetterBtn">
+                 </form>
+             </div>
+             <div class="footerCol">
+                <span class="footerTitle">
+                    QUICK LINKS
+                </span>
+                <div class="links">
+                    <a href="#">My account</a>
+                    <a href="#">Delivery information</a>
+                    <a href="#table">Table Reservations</a>
+                    <a href="#menu">Today's Menu</a>
+                    <a href="#">Terms and Conditions</a>
+                </div>
+
+             </div>
+         </div>
+         <div class="copyright flex">
+             &copy; JangoByte  <script> document.write(new Date().getFullYear())</script>  - All Rights Reserved.
+         </div>
+       </div>
+   </section>
+   <!-- Footer Section Ends  -->
+
+   <!-- Overlay designs -->
+   <div>
+       <img src="./assets/s5.png" alt="" class="designImage1">
+       <img src="./assets/s3.png" alt="" class="designImage2">
+       <img src="./assets/s6.png" alt="" class="designImage3">
+       <img src="./assets/s7.png" alt="" class="designImage4">
+       <img src="./assets/s2.png" alt="" class="designImage5">
+       <img src="./assets/s4.png" alt="" class="designImage6">
+       <img src="./assets/s4.png" alt="" class="designImage7">
+
+
+   </div>
+
+    <!-- link swiper javascript -->
+    <script src="./swiper-bundle.min.js"></script>
+    <!-- link javascript -->
+    <script src="./main.js"></script>
+</body>
+</html>

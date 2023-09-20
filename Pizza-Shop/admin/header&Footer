@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+        <!-- link css  -->
+        <link rel="stylesheet" href="../main.css">
+        <!-- link font -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+     <!-- Menu Section Starts -->
+    <section class="menuSection">
+        <i class='bx bx-chevrons-left icon leftIcon' ></i>
+       <div class="logoDiv grid">
+        <h1>00.</h1>
+        <span class="logoSubTitle">Our chicken</span>
+       </div>
+     <ul class="menuList">
+         <a href="" class="menuItem flex">
+            <i class='bx bxs-home icon' ></i>
+             <span>Dashboard</span>
+        </a>
+         <a href="" class="menuItem flex">
+            <i class='bx bxs-food-menu icon' ></i>
+             <span>Orders List</span>
+        </a>
+         <a href="" class="menuItem flex">
+            <i class='bx bx-male-female icon'  ></i>
+             <span>Customers</span>
+        </a>
+         <a href="" class="menuItem flex">
+            <i class='bx bxs-pencil icon' ></i>
+             <span>Reviews</span>
+        </a>
+         <a href="" class="menuItem flex">
+            <i class='bx bxs-bowl-rice icon' ></i>
+             <span>Food</span>
+        </a>
+         <a href="" class="menuItem flex">
+            <i class='bx bx-cool icon' ></i>
+             <span>Delivery Boy</span>
+        </a>
+         <a href="" class="menuItem flex">
+            <i class='bx bxs-briefcase icon' ></i>
+             <span>Careers</span>
+        </a>
+         <a href="" class="menuItem flex">
+            <i class='bx bxs-cog icon' ></i>
+             <span>Settings</span>
+        </a>
+
+     </ul>
+    </section>
+    <!-- Menu Section Starts -->
+
+    <!-- Link admin.js -->
+    <script src="./admin.js"></script>
+</body>
+</html>   
